@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux'
+import { fetchAllUser } from './actions'
 import './App.css';
-import User from './components/User'
+import HomePage from './components/HomePage'
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchAllUser('/user')
+  }
+
   render() {
     return (
       <div className="App">
-        <User/>
+        <HomePage/>
       </div>
     );
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchAllUser: () => dispatch(fetchAllUser())
+  }
+}
+
+export default connect(undefined, mapDispatchToProps)(App)

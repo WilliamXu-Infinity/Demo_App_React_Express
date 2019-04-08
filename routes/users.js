@@ -25,6 +25,14 @@ router.post('/user', (req, res) => {
     })
 })
 
+// GET all users
+router.get('/user', (req, res) => {
+  UserModal.find((err, users) => {
+    if (err) res.send(err);
+    res.json(users);
+  });
+})
+
 
 // GET request
 router.get('/user', (req, res) => {

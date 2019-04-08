@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 // Middleware, doing something at beginning
 app.use((req, res, next) => {
-  console.log(`${new Date().toString()} => ${req.originalUrl}`, req.body)
+  // console.log(`${new Date().toString()} => ${req.originalUrl}`, req.body)
   next() // withoud next, it will wait until time out to excute next line of code
 })
 app.use(homeRout)

@@ -8,7 +8,6 @@ const password = 'demo123'
 
 // Connect mongoDB
 const url = `mongodb://${user}:${password}@${server}/${database}`
-console.log(url)
 mongoose.connect(url, { useNewUrlParser: true})
   .then(res => console.log('Success connect to mongoDB'))
   .catch(err => console.warn('Error: Not connection to mongoDB =>', err.errmsg))

@@ -1,0 +1,4 @@
+export const STORE_ALL_USER = 'STORE_ALL_USER'
+export const UPDATING = 'UPDATING'
+export const INPUT_USER_NAME = 'INPUT_USER_NAME'
+export const INPUT_USER_EMAIL = 'INPUT_USER_EMAIL'
