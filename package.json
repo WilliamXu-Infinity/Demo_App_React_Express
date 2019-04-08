@@ -9,12 +9,14 @@
     "dev": "concurrently \"yarn server\" \"yarn client\""
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
+    "mongoose": "^5.4.22",
     "morgan": "~1.9.0"
   }
 }
